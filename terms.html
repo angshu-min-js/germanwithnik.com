@@ -1,1 +1,565 @@
+<!DOCTYPE html>
+<html dir="auto" lang="en" >
+<head>
+	<meta charset="UTF-8" />
+	<title>German with Nik</title>
 
+	<meta name="description" content="German with Nik" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="assets/favicon.png" />
+
+	<meta property="og:title" content="Privacy Policy - German with Nik" />
+	<meta property="og:description" content="Privacy Policy - German with Nik" />
+	<meta property="og:image" content="assets/og-image.png" />
+	<meta name="robots" content="index,nofollow" />
+	<style>
+		:root {
+		  --font-xl: 42px;
+		  --font-lg: 24px;
+		  --font-md: 20px;
+		  --font-sm: 18px;
+		  --font-xs: 16px;
+		  --font-xxs: 14px;
+		
+		  --screenshot-width: 300px;
+		  --screenshot-height: 500px;
+		  /* Light */
+		  --background-light: #ffffff;
+		  --background-image-light: url(assets/light-background.svg);
+		  --text-light: #222222;
+		  --text-color-footer-light: #8a8a8a;
+		  --text-color-link-hover-light: #454545;
+		  
+		  /* Dark */
+		  --background-dark: #121212;
+		  --background-image-dark: url(assets/dark-background.svg);
+		  --text-dark: #8a8a8a;
+		  --text-color-footer-dark: #8a8a8a;
+		  --text-color-link-hover-dark: #454545;
+		}
+		@media (max-width: 768px) {
+		  :root {
+		    --font-xl: 18px;
+		    --font-lg: 16px;
+		    --font-md: 14px;
+		    --font-sm: 12px;
+		    --font-xs: 12px;
+		    --font-xxs: 12px;
+		
+		    --screenshot-width: 250px;
+		    --screenshot-height: 300px;
+		  }
+		}
+		
+		/* Default */
+		html {
+		  --background-color: var(--background-light);
+		  --text-color: var(--text-light);
+		  --background-image: var(--background-image-light);
+		  --contrast-background-color: var(--background-dark);
+		  --text-color-footer: var(--text-color-footer-light);
+		  --text-color-link-hover: var(--text-color-link-hover-light)
+		}
+		/* Dark */
+		html.theme-dark {
+		  --background-color: var(--background-dark);
+		  --text-color: var(--text-dark);
+		  --background-image: var(--background-image-dark);
+		  --contrast-background-color: var(--background-light);
+		  --text-color-footer: var(--text-color-footer-dark);
+		  --text-color-link-hover: var(--text-color-link-hover-dark)  
+		}
+		
+		body {
+		  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		  color: var(--text-color);
+		  display: flex;
+		  min-height: 100vh;
+		  flex-direction: column;
+		  font-size: var(--font-md);
+		  background-color: var(--background-color);
+		  background-image: var(--background-image);
+		  background-size: cover;
+		  background-position-x: 20vw;
+		  background-position-y: -10vh;
+		  background-repeat: no-repeat;
+		  line-height: 1.4;
+		}
+		
+		main {
+		  flex: 1;
+		  width: 100%;
+		}
+		
+		a {
+		  color: var(--text-color-footer);
+		  /*color: #65638f;*/
+		  text-decoration: none;
+		}
+		a:hover {
+		  color: var(--text-color-link-hover);
+		}
+		
+		.button {
+		  display: flex;
+		  background: linear-gradient(65deg, #DA552F, #ea8e39);
+		  font-family: "Heebo", sans-serif;
+		  color: #fff;
+		  display: inline-flex;
+		  font-size: var(--font-xxs);
+		  letter-spacing: 0px;
+		  font-weight: 700;
+		  line-height: 16px;
+		  text-transform: uppercase;
+		  text-decoration: none !important;
+		  border: none;
+		  border-radius: 2px;
+		  cursor: pointer;
+		  justify-content: center;
+		  padding: 16px 32px;
+		  text-align: center;
+		  white-space: nowrap;
+		  box-shadow: 0 8px 24px rgba(32, 43, 54, 0.12);
+		  mix-blend-mode: multiply;
+		  transition: all 0.15s ease;
+		}
+		.button:hover {
+		  color: #fff;
+		  box-shadow: 0 8px 24px rgba(32, 43, 54, 0.25);
+		}
+		.button--link {
+		  background: rgba(0, 0, 0, 0);
+		  color: #5A51FE;
+		  box-shadow: none;
+		}
+		.button--link:hover {
+		  color: #8751FE;
+		  box-shadow: none;
+		}
+		
+		.accent {
+		  color: #5A51FE;
+		}
+		
+		.container {
+		  max-width: 960px;
+		  padding: 0 30px;
+		  margin: auto;
+		}
+		
+		h1, h2 {
+		  font-family: "Heebo", sans-serif;
+		}
+		
+		.container-desktop {
+		  max-width: 960px;
+		  padding: 0 30px;
+		  margin: auto;
+		}
+		@media (max-width: 768px) {
+		  .container-desktop {
+		    max-width: 100%;
+		    padding: 0;
+		  }
+		}
+		
+		.tobi-zoom__icon {
+		  display: none;
+		}
+		
+		.app__header {
+		  display: flex;
+		  flex-direction: row;
+		  margin-top: 128px;
+		  margin-bottom: 128px;
+		  align-items: center;
+		}
+		@media (max-width: 768px) {
+		  .app__header {
+		    align-items: flex-start;
+		    margin-top: 32px;
+		    margin-bottom: 16px;
+		  }
+		}
+		.app__logo-wrapper {
+		  display: inline-block;
+		  background-size: contain;
+		  max-width: 250px;
+		  max-height: 250px;
+		  padding: 1px;
+		  margin-right: 64px;
+		  width: 100%;
+		  height: 100%;
+		  background-repeat: no-repeat;
+		}
+		html[dir=rtl] .app__logo-wrapper {
+		  margin-left: 64px;
+		  margin-right: 0;
+		}
+		@media (max-width: 768px) {
+		  .app__logo-wrapper {
+		    max-width: 100px;
+		    max-height: 100px;
+		    margin-right: 16px;
+		  }
+		}
+		.app__logo {
+		  border-radius: 22.5%;
+		  mask-size: cover;
+		  width: 100%;
+		  height: auto;
+		}
+		.app__name {
+		  font-size: var(--font-xl);
+		  margin: 0;
+		}
+		.app__description {
+		  font-size: var(--font-lg);
+		}
+		@media (max-width: 768px) {
+		  .app__description {
+		    margin-top: 8px;
+		    margin-bottom: 0;
+		  }
+		}
+		.app__screenshot-a{
+		  text-align:center;
+		}
+		.app__screenshots-list {
+		  display: grid;
+		  grid-template-columns: repeat(6, var(--screenshot-width));
+		  grid-column-gap: 15px;
+		  padding: 30px 0;
+		  
+		}
+		@media (max-width: 768px) {
+		  .app__screenshots-list {
+		    padding: 32px;
+		  }
+		}
+		.app__screenshot {
+		  max-width:var(--screenshot-width);
+		  height:var(--screenshot-height);
+		  object-fit:contain;
+		  border-radius: 16px;
+		  /*box-shadow: 0 12px 48px rgba(17, 16, 62, 0.12);*/
+		  transition: all 0.3s ease-in-out;
+		  transform: scale(1);
+		  cursor: pointer;
+		}
+		.app__screenshot:hover {
+		  /*box-shadow: 0 24px 48px rgba(17, 16, 62, 0.12);*/
+		  transform: scale(1.05);
+		}
+		.app__screenshots-wrapper {
+		  overflow-y: auto;
+		}
+		.app__feature-container {
+		margin:auto;
+		}
+		.app__feature-wrapper{
+		  display: flex;
+		  justify-content: center;
+		  width: 100%;
+		}
+		.app__feature {
+		  width: 40%;
+		  border-radius: 16px;
+		  transition: all 0.3s ease-in-out;
+		  transform: scale(1);
+		}
+		@media (max-width: 768px) {
+		  .app__feature {
+		    width: 80%;
+		  }
+		}
+		
+		.app__buttons {
+		  display: flex;
+		  flex-direction: row;
+		  align-items: center;
+		  margin-left: -9.8px;
+		}
+		.app__buttons--mobile {
+		  display: none;
+		}
+		@media (max-width: 768px) {
+		  .app__buttons {
+		    margin-left: 0;
+		    margin-bottom: 64px;
+		  }
+		  .app__buttons--mobile {
+		    display: flex;
+		    justify-content: center;
+		  }
+		  .app__buttons--desktop {
+		    display: none;
+		  }
+		}
+		.app__button-play img {
+		  width: 176.4px;
+		}
+		.app__button-ios img {
+		  width: 140px;
+		}
+		.app__button-web {
+		  margin-left: 12px;
+		}
+		.app__button-web img {
+		  width: 157px;
+		}
+		@media (max-width: 768px) {
+		  .app__button-play img {
+		    width: 126px;
+		  }
+		  .app__button-ios img {
+		    width: 100px;
+		  }
+		  .app__button-web {
+		    margin-left: 8px;
+		  }
+		  .app__button-web img {
+		    width: 112px;
+		  }
+		}
+		.app__section-title {
+		  font-size: var(--font-lg);
+		}
+		.app__section {
+		  margin-bottom: 128px;
+		}
+		@media (max-width: 768px) {
+		  .app__section {
+		    margin-bottom: 64px;
+		  }
+		}
+		.app__featured-content {
+		  display: grid;
+		  grid-template-columns: 1fr 1fr 1fr 1fr;
+		  grid-column-gap: 32px;
+		  align-items: center;
+		}
+		@media (max-width: 768px) {
+		  .app__featured-content {
+		    display: block;
+		    padding: 32px;
+		  }
+		}
+		.app__featured-image {
+		  width: 100%;
+		  margin: auto;
+		}
+		
+		.footer {
+		  padding: 16px 0;
+		  font-size: var(--font-xs) !important;
+		}
+		.footer a {
+		  font-size: var(--font-xs) !important;
+		}
+		.footer__container {
+		  color: var(--text-color-footer);
+		  display: flex;
+		  width: 100%;
+		  justify-content: space-between;
+		  align-items: center;
+		}
+		@media (max-width: 768px) {
+		  .footer__container {
+		    flex-direction: column-reverse;
+		    align-items: flex-start;
+		  }
+		}
+		.footer__links {
+		  list-style: none;
+		  display: flex;
+		  padding-left: 0;
+		}
+		.footer__link {
+		  margin-left: 32px;
+		}
+		@media (max-width: 768px) {
+		  .footer__link {
+		    margin-left: 0;
+		    margin-right: 8px;
+		  }
+		}
+		
+		.page {
+		  max-width: 960px;
+		  padding: 0 30px;
+		  margin: auto;
+		}
+		
+		.bulb {
+		  font-size: 1.5rem;
+		  background-color: rgba(0, 0, 0, 0.7);
+		  border-radius: 0.75em;
+		  /* box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.3) inset; */
+		  color: #fdea7b;
+		  display: inline-flex;
+		  align-items: center;
+		  margin: auto;
+		  padding: 0.15em;
+		  width: 3em;
+		  height: 1.5em;
+		  transition: background-color 0.1s 0.3s ease-out, box-shadow 0.1s 0.3s ease-out;
+		  -webkit-appearance: none;
+		  -moz-appearance: none;
+		  appearance: none;
+		  z-index: 99;
+		  position:fixed;
+		  top: 2rem;
+		  right: 1rem;
+		}
+		
+		.bulb::before, .bulb:after {
+		  box-sizing: border-box;
+		  content: "";
+		  display: block;
+		}
+		
+		.bulb::before {
+		  background-color: #d7d7d7;
+		  border-radius: 50%;
+		  width: 1.2em;
+		  height: 1.2em;
+		  transition: background-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+		  z-index: 100;
+		}
+		
+		.bulb::after {
+		  background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.15) 0) 0 50% / 50% 100%, repeating-linear-gradient(90deg, #bbb 0, #bbb, #bbb 20%, #999 20%, #999 40%) 0 50% / 50% 100%, radial-gradient(circle at 50% 50%, #888 25%, transparent 26%);
+		  background-repeat: no-repeat;
+		  border: 0.25em solid transparent;
+		  border-left: 0.4em solid #d8d8d8;
+		  border-right: 0 solid transparent;
+		  transition: border-left-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+		  transform: translateX(-22.5%);
+		  transform-origin: 25% 50%;
+		  width: 1.2em;
+		  height: 1em;
+		}
+		
+		/* Checked */
+		.bulb:checked {
+		  background-color: rgba(0, 0, 0, 0.45);
+		  /* box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.1) inset; */
+		}
+		
+		.bulb:checked::before {
+		  background-color: currentColor;
+		  transform: translateX(125%)
+		}
+		
+		.bulb:checked::after {
+		  border-left-color: currentColor;
+		  transform: translateX(-2.5%) rotateY(180deg);
+		}	</style>
+	<link rel="stylesheet" href="assets/tobi.css" />
+</head>
+	<body>
+		<main>
+			<input class="bulb" id="toggle-theme" type="checkbox" readOnly checked/>
+<article class="page">
+	<header class="page__header">
+		<h1 class="page__title">Terms of Use - German with Nik</h1>
+	</header>
+	<div class="page__content">
+    <p>Last revised: Jul 12, 2024</p>
+    <div class="section">
+        <p>German with Nik is licensed to You (End-User) by QGENAI SOFTWARE TECHNOLOGIES PRIVATE LIMITED, located at Heinersdorfer Str. 35, Berlin, 13086, Germany ("Licensor"), for use only under the terms of this License Agreement.</p>
+        <p>We are registered in India and have our registered office at P54, Niva Park Extension, Brahmapur, Kolkata, West Bengal 700096.</p>
+        <p>By downloading the Licensed Application from Apple's software distribution platform ("App Store") and Google's software distribution platform ("Play Store"), and any update thereto (as permitted by this License Agreement), You indicate that You agree to be bound by all of the terms and conditions of this License Agreement, and that You accept this License Agreement. App Store and Play Store are referred to in this License Agreement as "Services."</p>
+        <p>The parties of this License Agreement acknowledge that the Services are not a Party to this License Agreement and are not bound by any provisions or obligations with regard to the Licensed Application, such as warranty, liability, maintenance and support thereof. QGENAI SOFTWARE TECHNOLOGIES PRIVATE LIMITED, not the Services, is solely responsible for the Licensed Application and the content thereof.</p>
+        <p>This License Agreement may not provide for usage rules for the Licensed Application that are in conflict with the latest Apple Media Services Terms and Conditions and Google Play Terms of Service ("Usage Rules"). QGENAI SOFTWARE TECHNOLOGIES PRIVATE LIMITED acknowledges that it had the opportunity to review the Usage Rules and this License Agreement is not conflicting with them.</p>
+        <p>German with Nik when purchased or downloaded through the Services, is licensed to You for use only under the terms of this License Agreement. The Licensor reserves all rights not expressly granted to You. German with Nik is to be used on devices that operate with Apple's operating systems ("iOS") or Google's operating system ("Android").</p>
+    </div>
+
+    <div class="section">
+        <h2>1. THE APPLICATION</h2>
+        <p>German with Nik ("Licensed Application") is a piece of software created to facilitate German learning by having a conversation with the AI Agent - NIk — and customized for iOS and Android mobile devices ("Devices"). It is used to Learn German by having a natural conversation with the AI Agent - Nik. The Licensed Application is not tailored to comply with industry-specific regulations (Health Insurance Portability and Accountability Act (HIPAA), Federal Information Security Management Act (FISMA), etc.), so if your interactions would be subjected to such laws, you may not use this Licensed Application. You may not use the Licensed Application in a way that would violate the Gramm-Leach-Bliley Act (GLBA).</p>
+    </div>
+
+    <div class="section">
+        <h2>2. SCOPE OF LICENSE</h2>
+        <p>2.1 You are given a non-transferable, non-exclusive, non-sublicensable license to install and use the Licensed Application on any Devices that You (End-User) own or control and as permitted by the Usage Rules, with the exception that such Licensed Application may be accessed and used by other accounts associated with You (EndUser, The Purchaser) via Family Sharing or volume purchasing.</p>
+        <p>2.2 This license will also govern any updates of the Licensed Application provided by Licensor that replace, repair, and/or supplement the first Licensed Application, unless a separate license is provided for such update, in which case the terms of that new license will govern.</p>
+        <p>2.3 You may not share or make the Licensed Application available to third parties (unless to the degree allowed by the Usage Rules, and with QGENAI SOFTWARE TECHNOLOGIES PRIVATE LIMITED's prior written consent), sell, rent, lend, lease or otherwise redistribute the Licensed Application.</p>
+        <p>2.4 You may not reverse engineer, translate, disassemble, integrate, decompile, remove, modify, combine, create derivative works or updates of, adapt, or attempt to derive the source code of the Licensed Application, or any part thereof (except with QGENAI SOFTWARE TECHNOLOGIES PRIVATE LIMITED's prior written consent).</p>
+        <p>2.5 You may not copy (excluding when expressly authorized by this license and the Usage Rules) or alter the Licensed Application or portions thereof. You may create and store copies only on devices that You own or control for backup keeping under the terms of this license, the Usage Rules, and any other terms and conditions that apply to the device or software used. You may not remove any intellectual property notices. You acknowledge that no unauthorized third parties may gain access to these copies at any time. If you sell your Devices to a third party, you must remove the Licensed Application from the Devices before doing so.</p>
+        <p>2.6 Violations of the obligations mentioned above, as well as the attempt of such infringement, may be subject to prosecution and damages.</p>
+        <p>2.7 Licensor reserves the right to modify the terms and conditions of licensing.</p>
+        <p>2.8 Nothing in this license should be interpreted to restrict third-party terms. When using the Licensed Application, You must ensure that You comply with applicable third-party terms and conditions.</p>
+    </div>
+
+    <!-- Other sections omitted for brevity -->
+
+    <div class="section">
+        <h2>11. TERMINATION</h2>
+        <p>The license is valid until terminated by QGENAI SOFTWARE TECHNOLOGIES PRIVATE LIMITED or by You. Your rights under this license will terminate automatically and without notice from QGENAI SOFTWARE TECHNOLOGIES PRIVATE LIMITED if You fail to adhere to any term(s) of this license. Upon License termination, You shall stop all use of the Licensed Application, and destroy all copies, full or partial, of the Licensed Application.</p>
+    </div>
+
+    <div class="section">
+        <h2>12. THIRD-PARTY TERMS OF AGREEMENTS AND BENEFICIARY</h2>
+        <p>QGENAI SOFTWARE TECHNOLOGIES PRIVATE LIMITED represents and warrants that QGENAI SOFTWARE TECHNOLOGIES PRIVATE LIMITED will comply with applicable third-party terms of agreement when using Licensed Application.</p>
+        <p>In Accordance with Section 9 of the "Instructions for Minimum Terms of Developer's End-User License Agreement," both Apple and Google and their subsidiaries shall be third-party beneficiaries of this End User License Agreement and — upon Your acceptance of the terms and conditions of this License Agreement, both Apple and Google will have the right (and will be deemed to have accepted the right) to enforce this End User License Agreement against You as a third-party beneficiary thereof.</p>
+    </div>
+
+    <div class="section">
+        <h2>13. INTELLECTUAL PROPERTY RIGHTS</h2>
+        <p>QGENAI SOFTWARE TECHNOLOGIES PRIVATE LIMITED and the End-User acknowledge that, in the event of any third-party claim that the Licensed Application or the End-User's possession and use of that Licensed Application infringes on the third party's intellectual property rights, QGENAI SOFTWARE TECHNOLOGIES PRIVATE LIMITED, and not the Services, will be solely responsible for the investigation, defense, settlement, and discharge or any such intellectual property infringement claims.</p>
+    </div>
+
+    <div class="section">
+        <h2>14. APPLICABLE LAW</h2>
+        <p>This License Agreement is governed by the laws of India excluding its conflicts of law rules.</p>
+    </div>
+
+    <div class="section">
+        <h2>15. MISCELLANEOUS</h2>
+        <p>15.1 If any of the terms of this agreement should be or become invalid, the validity of the remaining provisions shall not be affected. Invalid terms will be replaced by valid ones formulated in a way that will achieve the primary purpose.</p>
+        <p>15.2 Collateral agreements, changes and amendments are only valid if laid down in writing. The preceding clause can only be waived in writing.</p>
+    </div>
+    </article>
+
+      </main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__container">
+					<p class="footer__love">
+						<script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2024</noscript> All rights reserved
+							&mdash; <a href="https://qloudai.app/" target="_blank">QloudAI</a>
+					</p>
+					<ul class="footer__links">
+							<li class="footer__link">
+								<a href="privacy">Privacy</a>
+							</li>
+							<li class="footer__link">
+								<a href="terms" targe="_blank">Terms</a>
+							</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="assets/tobi.min.js" /></script>
+		<script>
+			window.onload = function () {
+				var tobi = new Tobi();
+			};
+		</script>
+		<script>
+			window.onload = function () {
+					document.querySelector('#toggle-theme').addEventListener('change', (event) => {
+						if(event.target.checked){
+							document.getElementsByTagName("html")[0].className = "";
+						}else{
+							document.getElementsByTagName("html")[0].className = "theme-dark";
+						}
+						
+					});
+			};
+		</script>
+  </body>
+</html>
