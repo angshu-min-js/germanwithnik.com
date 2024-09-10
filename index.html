@@ -197,12 +197,57 @@
 		  margin-right: 0;
 		}
 		@media (max-width: 768px) {
-		  .app__logo-wrapper {
-		    max-width: 100px;
-		    max-height: 100px;
-		    margin-right: 16px;
-		  }
-		}
+	        .app__header {
+	                flex-direction: column;
+	                align-items: center;
+	                margin-top: 10px;
+	                margin-bottom: 10px;
+	            }
+	
+	            .app__content {
+	                max-width: 100%;
+	                text-align: center;
+	                margin-bottom: 20px;
+	                order: -1; /* This moves the content to the top */
+	            }
+	
+	            .app__logo-wrapper {
+	                display: none; /* Hide the logo on mobile */
+	            }
+			.mobile-frame {
+	                width: 100%;
+	                max-width: 315px; /* Typical width for mobile devices */
+	                height: 560px; /* Adjust this to match YouTube Shorts aspect ratio */
+	                margin: 0 auto;
+	            }
+	
+	            .mobile-frame__inner {
+	                position: relative;
+	                padding-bottom: 177.77%; /* 16:9 aspect ratio for YouTube Shorts */
+	                height: 0;
+	                overflow: hidden;
+	            }
+	
+	            .mobile-frame__inner iframe {
+	                position: absolute;
+	                top: 0;
+	                left: 0;
+	                width: 100%;
+	                height: 100%;
+	            }
+	
+	            .app__buttons {
+	                display: flex;
+	                justify-content: center;
+	                margin-top: 20px;
+	            }
+	
+	            .app__button-play img,
+	            .app__button-ios img {
+	                height: 40px;
+	                width: auto;
+	            }
+	        }
 		.app__logo {
 		  border-radius: 22.5%;
 		  mask-size: cover;
@@ -502,30 +547,29 @@
 <body>
 	<main>
 		<input class="bulb" id="toggle-theme" type="checkbox" readOnly checked/>
+
 		<header class="app__header container">
-			<div class="app__content">
-				<div class="app__logo-wrapper">
-					<img class="app__logo" src="content/image/wr70okrrlsctvbiq2aa5.png" alt="German with Nik">
-				</div>
-				<div class="app__infos">
-					<h1 class="app__name">German with Nik</h1>
-					<p class="app__description">Your personal German Tutor!</p>
-					<div class="app__buttons app__buttons--desktop">
-						<a href="https://play.google.com/store/apps/details?id=com.qloudai.germanwithnik" class="app__button-play" target="_blank" title="Get on Google Play">
-							<img src="assets/google-play-badge.png" alt="Get on Google Play">
-						</a>
-						<a href="https://apps.apple.com/app/german-with-nik/id6504157617" class="app__button-ios" target="_blank" title="Get on Appstore">
-							<img src="assets/ios-badge.svg" alt="Get on Appstore">
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="mobile-frame">
-				<div class="mobile-frame__inner">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/hpo8QT9Tqo0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-			</div>
-		</header>
+	            <div class="app__content">
+	                <div class="app__logo-wrapper">
+	                    <img class="app__logo" src="content/image/wr70okrrlsctvbiq2aa5.png" alt="German with Nik">
+	                </div>
+	                <h1 class="app__name">German with Nik</h1>
+	                <p class="app__description">Your personal German Tutor!</p>
+	            </div>
+	            <div class="mobile-frame">
+	                <div class="mobile-frame__inner">
+	                    <iframe src="https://www.youtube.com/embed/hpo8QT9Tqo0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	                </div>
+	            </div>
+	            <div class="app__buttons">
+	                <a href="https://play.google.com/store/apps/details?id=com.qloudai.germanwithnik" class="app__button-play" target="_blank" title="Get on Google Play">
+	                    <img src="assets/google-play-badge.png" alt="Get on Google Play">
+	                </a>
+	                <a href="https://apps.apple.com/app/german-with-nik/id6504157617" class="app__button-ios" target="_blank" title="Get on Appstore">
+	                    <img src="assets/ios-badge.svg" alt="Get on Appstore">
+	                </a>
+	            </div>
+	        </header>
 		<div class="app__buttons app__buttons--mobile container">
 			<a href="https://play.google.com/store/apps/details?id=com.qloudai.germanwithnik" class="app__button-play" target="_blank" title="Get on Google Play">
 				<img src="assets/google-play-badge.png" alt="Get on Google Play">
