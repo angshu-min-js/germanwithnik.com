@@ -124,9 +124,13 @@
     }
 
     .app__content {
-        text-align: center;
-        order: 2;
+       display: flex;
+	align-items: center;
     }
+
+  .app__text {
+            flex: 1;
+        }
 
     .app__name {
         font-size: var(--font-xl);
@@ -167,9 +171,9 @@
 
     .app__buttons {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 10px;
-        order: 3;
+        margin-top: 15px;
     }
 
     .app__buttons--mobile {
@@ -304,12 +308,10 @@
         transform: translateX(-2.5%) rotateY(180deg);
     }
 .app__logo-wrapper {
-            display: none; /* Will be changed to block for desktop */
-            background-size: contain;
-            width: 100px; /* Adjusted size */
-            height: 100px; /* Adjusted size */
+            display: block;
+            width: 100px;
+            height: 100px;
             margin-right: 20px;
-            background-repeat: no-repeat;
         }
 
         .app__logo {
@@ -361,15 +363,11 @@
 	<main>
 		<input class="bulb" id="toggle-theme" type="checkbox" readOnly checked/>
 		<header class="app__header container">
-		    <div class="mobile-frame">
-		        <div class="mobile-frame__inner">
-		            <iframe src="https://www.youtube.com/embed/hpo8QT9Tqo0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		        </div>
-		    </div>
 		    <div class="app__content">
 		        <div class="app__logo-wrapper">
 		            <img class="app__logo" src="content/image/wr70okrrlsctvbiq2aa5.png" alt="German with Nik">
 		        </div>
+			<div class="app__text">
 		        <h1 class="app__name">German with Nik</h1>
 		        <p class="app__description">Your personal German Tutor!</p>
 		        <div class="app__buttons app__buttons--desktop">
@@ -379,8 +377,14 @@
 		            <a href="https://apps.apple.com/app/german-with-nik/id6504157617" class="app__button-ios" target="_blank" title="Get on Appstore">
 		                <img src="assets/ios-badge.svg" alt="Get on Appstore">
 		            </a>
+       </div>
+                </div>
+            </div>
+			<div class="mobile-frame">
+		        <div class="mobile-frame__inner">
+		            <iframe src="https://www.youtube.com/embed/hpo8QT9Tqo0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		        </div>
-		    </div>
+		    	</div>
 		    <div class="app__buttons app__buttons--mobile">
 		        <a href="https://play.google.com/store/apps/details?id=com.qloudai.germanwithnik" class="app__button-play" target="_blank" title="Get on Google Play">
 		            <img src="assets/google-play-badge.png" alt="Get on Google Play">
