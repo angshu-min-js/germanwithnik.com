@@ -182,7 +182,7 @@
 
     .app__button-play img,
     .app__button-ios img {
-        height: 40px;
+        height: 60px;
         width: auto;
     }
 
@@ -303,24 +303,21 @@
         border-left-color: currentColor;
         transform: translateX(-2.5%) rotateY(180deg);
     }
-		 .app__logo-wrapper {
-		  display: none;
-		  background-size: contain;
-		  max-width: 250px;
-		  max-height: 250px;
-		  padding: 1px;
-		  margin-right: 64px;
-		  width: 50%;
-		  height: 50%;
-		  background-repeat: no-repeat;
-		}
+.app__logo-wrapper {
+            display: none; /* Will be changed to block for desktop */
+            background-size: contain;
+            width: 100px; /* Adjusted size */
+            height: 100px; /* Adjusted size */
+            margin-right: 20px;
+            background-repeat: no-repeat;
+        }
 
-	.app__logo {
-		  border-radius: 22.5%;
-		  mask-size: cover;
-		  width: 50%;
-		  height: auto;
-		}
+        .app__logo {
+            border-radius: 22.5%;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     @media (min-width: 769px) {
         .app__header {
             flex-direction: row;
@@ -352,6 +349,10 @@
         .app__buttons--desktop {
             display: flex;
         }
+
+	.app__logo-wrapper {
+                display: block; /* Show logo in desktop view */
+            }
     }
 </style>
 	<link rel="stylesheet" href="assets/tobi.css" />
