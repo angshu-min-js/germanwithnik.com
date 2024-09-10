@@ -503,7 +503,9 @@
         }
 
         .app__video {
-            margin-top: 16px;
+          flex: 0 0 auto;
+    	margin-top: 0;
+	}
         .download-buttons a {
             display: inline-block;
         }
@@ -541,6 +543,49 @@
                 margin-top: 32px;
             }
         }
+		    .mobile-frame {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    background-color: #000;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin: 20px auto;
+}
+
+.mobile-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 20px;
+    background-color: #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.mobile-frame__inner {
+    background-color: #fff;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.mobile-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-frame {
+        width: 280px;
+        height: 560px;
+    }
+}
 	</style>
 	<link rel="stylesheet" href="assets/tobi.css" />
 </head>
@@ -548,30 +593,26 @@
 		<main>
 			<input class="bulb" id="toggle-theme" type="checkbox" readOnly checked/>
 <header class="app__header container">
-	<div class="app__logo-wrapper"> <img class="app__logo" src="content/image/wr70okrrlsctvbiq2aa5.png" alt="German with Nik">
-			<!--<a href="https://www.producthunt.com/posts/german-with-nik?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-german&#0045;with&#0045;nik" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=476169&theme=light" alt="German&#0032;with&#0032;Nik - Your&#0032;personal&#0032;German&#0032;Tutor&#0033; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-	-->
-	</div>
-		<div class="app__content container">
-            <div class="app__infos">
-                <h1 class="app__name">German with Nik</h1>
-                <p class="app__description">Your personal German Tutor!</p>
-            </div>
-            <div class="app__buttons-and-video">
-                <div class="app__buttons app__buttons--desktop">
-                    <a href="https://play.google.com/store/apps/details?id=com.qloudai.germanwithnik" class="app__button-play" target="_blank" title="Get on Google Play">
-                        <img src="assets/google-play-badge.png" alt="Get on Google Play">
-                    </a>
-                    <a href="https://apps.apple.com/app/german-with-nik/id6504157617" class="app__button-ios" target="_blank" title="Get on Appstore">
-                        <img src="assets/ios-badge.svg" alt="Get on Appstore">
-                    </a>
-                </div>
-                <div class="app__video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hpo8QT9Tqo0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
+    <div class="app__logo-wrapper">
+        <img class="app__logo" src="content/image/wr70okrrlsctvbiq2aa5.png" alt="German with Nik">
+    </div>
+    <div class="app__infos">
+        <h1 class="app__name">German with Nik</h1>
+        <p class="app__description">Your personal German Tutor!</p>
+        <div class="app__buttons app__buttons--desktop">
+            <a href="https://play.google.com/store/apps/details?id=com.qloudai.germanwithnik" class="app__button-play" target="_blank" title="Get on Google Play">
+                <img src="assets/google-play-badge.png" alt="Get on Google Play">
+            </a>
+            <a href="https://apps.apple.com/app/german-with-nik/id6504157617" class="app__button-ios" target="_blank" title="Get on Appstore">
+                <img src="assets/ios-badge.svg" alt="Get on Appstore">
+            </a>
         </div>
-
+    </div>
+    <div class="app__video mobile-frame">
+        <div class="mobile-frame__inner">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hpo8QT9Tqo0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
 </header>
 <div class="app__buttons app__buttons--mobile container">
 	<a href="https://play.google.com/store/apps/details?id=com.qloudai.germanwithnik" class="app__button-play" target="_blank"
