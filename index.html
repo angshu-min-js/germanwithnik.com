@@ -312,12 +312,17 @@
             width: 100px;
             height: 100px;
             margin-right: 20px;
+	    overflow: hidden; /* Hide any overflow from the image */
+
         }
 
         .app__logo {
             width: 100%;
             height: 100%;
             object-fit: contain;
+	    border-radius: 0; /* Remove any border radius */
+            border: none; /* Remove any border */
+            box-shadow: none; /* Remove any box shadow */
         }
     @media (min-width: 769px) {
         .app__header {
