@@ -170,19 +170,19 @@
     }
 
     .app__buttons {
-        display: flex;
-        justify-content: flex-start;
-        gap: 10px;
-        margin-top: 15px;
+	display: flex;
+	 flex-direction: row;
+	 align-items: center;
+	 margin-left: -9.8px;
     }
 
     .app__buttons--mobile {
-        display: flex;
-    }
-
-    .app__buttons--desktop {
         display: none;
     }
+
+  /*  .app__buttons--desktop {
+        display: flex;
+    } */
 
     .app__button-play img,
     .app__button-ios img {
@@ -348,13 +348,13 @@
             order: 3;
         }
 
-        .app__buttons--mobile {
+        .app__buttons--desktop {
             display: none;
         }
 
-        .app__buttons--desktop {
+        /*.app__buttons--desktop {
             display: flex;
-        }
+        } */
 
 	.app__logo, .app__logo-wrapper {
                 display: block; /* Show logo in desktop view */
