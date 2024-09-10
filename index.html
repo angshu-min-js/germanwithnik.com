@@ -128,10 +128,6 @@
         order: 2;
     }
 
-    .app__logo-wrapper {
-        display: none;
-    }
-
     .app__name {
         font-size: var(--font-xl);
         margin: 0;
@@ -307,6 +303,22 @@
         border-left-color: currentColor;
         transform: translateX(-2.5%) rotateY(180deg);
     }
+		
+	.app__logo-wrapper {
+		  display: inline-block;
+		  background-size: contain;
+		  max-width: 250px;
+		  max-height: 250px;
+		  padding: 1px;
+		  margin-right: 64px;
+		  width: 100%;
+		  height: 100%;
+		  background-repeat: no-repeat;
+		}
+		html[dir=rtl] .app__logo-wrapper {
+		  margin-left: 64px;
+		  margin-right: 0;
+		}
 
     @media (min-width: 769px) {
         .app__header {
@@ -322,9 +334,7 @@
         }
 
         .app__logo-wrapper {
-            max-width: 100px;
-            max-height: 100px;
-            margin-right: 20px;
+	    display: none;
         }
 
         .mobile-frame {
